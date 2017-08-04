@@ -3,9 +3,31 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <script src="application.js"></script>
+    <title>Twittler</title>
   </head>
   <body>
-    <script>
+
+    <footer>
+      <p>Twittler</p>
+    </footer>
+    <button class="refresh">Refresh Tweets</button>
+    <button class="new_tweet">New Tweet</button>
+    <!--button class="filter_by_user">Filter By User</button-->
+
+    <div class="new_tweet_form">
+      <form>
+        Username:
+        <input type="text" name="username"><br>
+        Message:
+        <input type="text" name="message"><br>
+        <input type="submit" value="Submit"><br>
+      </form>
+      <!--button class="new_tweet_submit">Submit</button-->
+    </div>
+
+    <div class="feed"></div>
+    <!--script>
 
       $(document).ready(function(){
         var $body = $('body');
@@ -22,6 +44,6 @@
 
       });
 
-    </script>
+    </script-->
   </body>
 </html>
