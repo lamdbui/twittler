@@ -5,10 +5,15 @@ function refreshCurrentTweets() {
   let tweets = streams.home;
   for (let i = 0; i < tweets.length; i++) {
     var tweet = tweets[i];
-    var $tweet = $('<div></div>');
+    var $tweet = $('<div class="tweet"></div>');
     $tweet.text('@' + tweet.user + ': ' + tweet.message);
     $tweet.prependTo($node);
   }
+  $('.tweet:odd').css('background-color', '#DDD');
+  $('.tweet:even').css('background-color', '#FFF');
+  //$('.tweet:odd').css('{"background-color": "#DDD"}');
+  //$('.tweet:odd').addClass('.tweet-light');
+  //$('.tweet:even').addClass('.tweet-dark');
 }
 
 $(document).ready(function(){

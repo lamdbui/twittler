@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="twittler.css"></link>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
     <script src="application.js"></script>
@@ -8,42 +9,29 @@
   </head>
   <body>
 
-    <footer>
-      <p>Twittler</p>
-    </footer>
+    <header>
+      <h1>Twittler</h1>
+    </header>
+
     <button class="refresh">Refresh Tweets</button>
     <button class="new_tweet">New Tweet</button>
-    <!--button class="filter_by_user">Filter By User</button-->
-
     <div class="new_tweet_form">
       <form>
-        Username:
-        <input type="text" name="username"><br>
-        Message:
-        <input type="text" name="message"><br>
-        <input type="submit" value="Submit"><br>
+        <p>
+          <label>Username:</label>
+          <input type="text" name="username">
+        </p>
+        <p>
+          <label>Message:</label>
+          <input type="text" name="message">
+        </p>
+        <input type="submit" value="Submit">
       </form>
-      <!--button class="new_tweet_submit">Submit</button-->
     </div>
-
     <div class="feed"></div>
-    <!--script>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
-
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
-
-      });
-
-    </script-->
+    <footer>
+      <p class="footer">Lam Bui</p>
+    </footer>
   </body>
 </html>

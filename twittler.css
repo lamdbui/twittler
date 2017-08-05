@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+}
+.footer {
+  text-align: center;
+}
+.tweet {
+  padding: 10px;
+  //border: 1px solid red;
+  border-radius: 5px;
+}
+.tweet-light {
+  background-color: #010;
+}
+.tweet-dark {
+  background-color: #222;
+}
