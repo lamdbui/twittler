@@ -20,20 +20,20 @@ $(document).ready(function(){
   let $feed = $('.feed');
 
   // configure our initial page state
-  $('.new_tweet_form').hide();
+  $('#new_tweet_form').hide();
 
   // set click handlers
-  $('.refresh').on('click', function() {
+  $('#refresh').on('click', function() {
     refreshCurrentTweets();
   });
-  $('.new_tweet').on('click', function() {
-    $('.new_tweet_form').slideToggle();
+  $('#new_tweet').on('click', function() {
+    $('#new_tweet_form').slideToggle();
   });
-  $('.new_tweet_form').submit(function(event) {
+  $('#new_tweet_form').submit(function(event) {
     // NOTE: this is important to prevent default form submission handling
     event.preventDefault();
 
-    let inputData =  $('.new_tweet_form :input').serializeArray();
+    let inputData =  $('#new_tweet_form :input').serializeArray();
     visitor = inputData[0].value;
     let message = inputData[1].value;
 
@@ -45,7 +45,7 @@ $(document).ready(function(){
       writeTweet(message);
     }
     setTimeout(function() {
-      $('.new_tweet_form').slideUp();
+      $('#new_tweet_form').slideUp();
     }, 1000);
   });
 
