@@ -9,9 +9,12 @@
 
 body {
   max-width: 800px;
+  //background-color: #03A9F4;
+  background-color: #0288D1;
+  font-family: 'Roboto', sans-serif;
 }
-head {
-  background-color: #03A9F4;
+header {
+  color: white;
 }
 h1 {
   text-align: center;
@@ -32,11 +35,13 @@ h1 {
 }
 .tweet_buttons {
   display: inline-block;
+  margin-left: 10px;
 }
 .tweet_button {
   display: inline-block;
   cursor: pointer;
-  background-color: gray;
+  //background-color: gray;
+  background-color: #B3E5FC;
   border-radius: 5px;
   text-align: center;
   //vertical-align: middle;
@@ -52,6 +57,7 @@ h1 {
   background-color: #B3E5FC;
   margin: 10px;
   text-align: center;
+  border-radius: 5px;
 }
 
 #new_tweet_form {
