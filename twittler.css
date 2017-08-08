@@ -20,14 +20,6 @@ header {
 h1 {
   text-align: center;
 }
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #BDBDBD;
-    margin: 1em 0;
-    padding: 0;
-}
 .footer {
   text-align: center;
   color: #212121;
@@ -50,12 +42,10 @@ hr {
   background-color: #B3E5FC;
   border-radius: 5px;
   text-align: center;
-  //vertical-align: middle;
   padding: 0 10px 0 10px;
-  //clear: both;
 }
 .tweet_button:hover {
-  background-color: orange;
+  background-color: #FFC107;
 }
 .username {
   display: inline;
@@ -71,24 +61,17 @@ hr {
   padding-left: 20px;
   padding-right: 20px;
 }
-#refresh_tweets_button {
-  //float: left;
-}
-#new_tweet_button {
-  //float: right;
-}
 .feed {
   margin: 10px;
 }
 .feed_status {
-  //background-color: #B3E5FC;
+  cursor: pointer;
   background-color: #FFC107;
   color: #212121;
   margin: 10px;
   text-align: center;
   border-radius: 5px;
 }
-
 #new_tweet_form {
   background-color: #03A9F4;
   margin: 10px;
