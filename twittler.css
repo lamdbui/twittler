@@ -1,3 +1,18 @@
+/*.dark-primary-color    { background: #0288D1; }
+.default-primary-color { background: #03A9F4; }
+.light-primary-color   { background: #B3E5FC; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FFC107; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }*/
+
+body {
+  max-width: 800px;
+}
+head {
+  background-color: #03A9F4;
+}
 h1 {
   text-align: center;
 }
@@ -14,4 +29,32 @@ h1 {
 }
 .tweet-dark {
   background-color: #222;
+}
+.tweet_buttons {
+  display: inline-block;
+}
+.tweet_button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: gray;
+  border-radius: 5px;
+  text-align: center;
+  //vertical-align: middle;
+  padding: 0 10px 0 10px;
+}
+.tweet_button:hover {
+  background-color: orange;
+}
+.feed {
+  margin: 10px;
+}
+.feed_status {
+  background-color: #B3E5FC;
+  margin: 10px;
+  text-align: center;
+}
+
+#new_tweet_form {
+  background-color: #03A9F4;
+  margin: 10px;
 }
