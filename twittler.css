@@ -15,6 +15,7 @@ body {
 }
 header {
   color: white;
+  font-family: 'Pacifico', cursive;
 }
 h1 {
   text-align: center;
@@ -29,6 +30,7 @@ hr {
 }
 .footer {
   text-align: center;
+  color: #212121;
 }
 .tweet {
   padding: 10px;
@@ -55,6 +57,20 @@ hr {
 .tweet_button:hover {
   background-color: orange;
 }
+.username {
+  display: inline;
+  color: #0288D1;
+}
+.date {
+  display: inline;
+  font-style: italic;
+  color: #757575;
+}
+.message {
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 #refresh_tweets_button {
   //float: left;
 }
@@ -65,7 +81,9 @@ hr {
   margin: 10px;
 }
 .feed_status {
-  background-color: #B3E5FC;
+  //background-color: #B3E5FC;
+  background-color: #FFC107;
+  color: #212121;
   margin: 10px;
   text-align: center;
   border-radius: 5px;
