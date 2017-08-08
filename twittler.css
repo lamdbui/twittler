@@ -19,6 +19,14 @@ header {
 h1 {
   text-align: center;
 }
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #BDBDBD;
+    margin: 1em 0;
+    padding: 0;
+}
 .footer {
   text-align: center;
 }
@@ -27,28 +35,31 @@ h1 {
   //border: 1px solid red;
   border-radius: 5px;
 }
-.tweet-light {
-  background-color: #010;
-}
-.tweet-dark {
-  background-color: #222;
-}
 .tweet_buttons {
   display: inline-block;
   margin-left: 10px;
+  //clear: both;
+  //width: 140px;
 }
 .tweet_button {
   display: inline-block;
   cursor: pointer;
-  //background-color: gray;
+  width: 140px;
   background-color: #B3E5FC;
   border-radius: 5px;
   text-align: center;
   //vertical-align: middle;
   padding: 0 10px 0 10px;
+  //clear: both;
 }
 .tweet_button:hover {
   background-color: orange;
+}
+#refresh_tweets_button {
+  //float: left;
+}
+#new_tweet_button {
+  //float: right;
 }
 .feed {
   margin: 10px;
@@ -63,4 +74,5 @@ h1 {
 #new_tweet_form {
   background-color: #03A9F4;
   margin: 10px;
+  padding: 10px;
 }

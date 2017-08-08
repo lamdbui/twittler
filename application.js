@@ -20,9 +20,6 @@ var refreshCurrentTweets = function() {
   }
   $('.tweet:odd').css('background-color', '#DDD');
   $('.tweet:even').css('background-color', '#FFF');
-  //$('.tweet:odd').css('{"background-color": "#DDD"}');
-  //$('.tweet:odd').addClass('.tweet-light');
-  //$('.tweet:even').addClass('.tweet-dark');
   currentTweetCount = tweets.length;
 }
 
@@ -34,9 +31,12 @@ var checkForNewTweets = function(timeInterval) {
 
   $('.feed_status').text('Click to update ' + numOfNewTweets + ' new tweets');
 
-  if (numOfNewTweets === 0) {
-    $('.feed_status').slideUp();
-  } else {
+  // if (numOfNewTweets === 0) {
+  //   $('.feed_status').slideUp();
+  // } else {
+  //   $('.feed_status').slideDown();
+  // }
+  if (numOfNewTweets > 0) {
     $('.feed_status').slideDown();
   }
 
@@ -55,17 +55,12 @@ $(document).ready(function(){
     refreshCurrentTweets();
   });
   $('.feed_status').on('click', function() {
+    $(this).slideUp();
     refreshCurrentTweets();
   });
   $('#new_tweet_button').on('click', function() {
     $('#new_tweet_form').slideToggle();
   });
-  // $('#refresh').on('click', function() {
-  //   refreshCurrentTweets();
-  // });
-  // $('#new_tweet').on('click', function() {
-  //   $('#new_tweet_form').slideToggle();
-  // });
   $('#new_tweet_form').submit(function(event) {
     // NOTE: this is important to prevent default form submission handling
     event.preventDefault();
