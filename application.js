@@ -2,10 +2,11 @@
 window.visitor;
 
 var currentTweetCount = 0;
+var currentUser = undefined;
 
-var refreshCurrentTweets = function() {
+var refreshCurrentTweets = function(user) {
   let $node = $('.feed');
-  let tweets = streams.home;
+  let tweets = streams.users[user] || streams.home;
 
   // remove previous nodes
   $('.feed').children().remove('.tweet');
@@ -15,11 +16,16 @@ var refreshCurrentTweets = function() {
     let tweet = tweets[i];
     let timeDifferenceStr = moment(tweet.created_at).fromNow();
     let $tweet = $('<div class="tweet"></div>');
-    let $tweetUsername = $('<a class="username" href="#">@HLS</a>');
+    let $tweetUsername = $('<p class="username"></p>');
     let $tweetDate = $('<p class="date"></p>');
     let $tweetMessage = $('<p class="message"></p>');
 
     $tweetUsername.text('@' + tweet.user);
+    $tweet.attr('id', tweet.user);
+    $tweetUsername.on('click', function() {
+      let username = $(this).text().substring(1);
+      refreshCurrentTweets(username);
+    });
     $tweetDate.text(' - '.concat(timeDifferenceStr));
     $tweetMessage.text(tweet.message);
     $tweet.prependTo($node);
