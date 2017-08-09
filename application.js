@@ -2,11 +2,12 @@
 window.visitor;
 
 var currentTweetCount = 0;
+// used to keep track of current user for filtering
 var currentUser = undefined;
 
 var refreshCurrentTweets = function(user) {
   let $node = $('.feed');
-  let tweets = streams.users[user] || streams.home;
+  let tweets = (currentUser === undefined) ? streams.home : streams.users[currentUser];
 
   // remove previous nodes
   $('.feed').children().remove('.tweet');
@@ -24,7 +25,13 @@ var refreshCurrentTweets = function(user) {
     $tweet.attr('id', tweet.user);
     $tweetUsername.on('click', function() {
       let username = $(this).text().substring(1);
-      refreshCurrentTweets(username);
+      currentUser = username;
+
+      // show filter box
+      $('.filter').text('Clear filter: ' + username);
+      $('.filter').slideDown();
+
+      refreshCurrentTweets();
     });
     $tweetDate.text(' - '.concat(timeDifferenceStr));
     $tweetMessage.text(tweet.message);
@@ -60,12 +67,18 @@ $(document).ready(function(){
   // configure our initial page state
   $('#new_tweet_form').hide();
   $('.feed_status').hide();
+  $('.filter').hide();
 
   // set click handlers
   $('#refresh_tweets_button').on('click', function() {
     refreshCurrentTweets();
   });
   $('.feed_status').on('click', function() {
+    refreshCurrentTweets();
+  });
+  $('.filter').on('click', function() {
+    currentUser = undefined;
+    $(this).slideUp();
     refreshCurrentTweets();
   });
   $('#new_tweet_button').on('click', function() {
