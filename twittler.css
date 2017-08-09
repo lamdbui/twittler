@@ -11,6 +11,8 @@ body {
   max-width: 800px;
   background-color: #0288D1;
   font-family: 'Roboto', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
 }
 header {
   color: white;
