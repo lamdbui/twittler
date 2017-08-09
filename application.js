@@ -40,8 +40,7 @@ var refreshCurrentTweets = function(user) {
     $tweetDate.appendTo($tweet);
     $tweetMessage.appendTo($tweet);
   }
-  $('.tweet:odd').css('background-color', '#DDD');
-  $('.tweet:even').css('background-color', '#FFF');
+  
   currentTweetCount = tweets.length;
 
   // hide our 'feed_status', since we updated
