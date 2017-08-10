@@ -15,7 +15,7 @@ body {
   margin-right: auto;
 }
 header {
-  color: white;
+  color: #FFF;
   font-family: 'Pacifico', cursive;
 }
 h1 {
@@ -23,9 +23,10 @@ h1 {
 }
 .footer {
   text-align: center;
-  color: #212121;
+  color: #FFF;
 }
 .tweet {
+  position: relative;
   padding: 10px;
   border-radius: 5px;
   background-color: #FFF;
@@ -68,6 +69,15 @@ h1 {
   padding-left: 20px;
   padding-right: 20px;
 }
+.timestamp {
+  float: right;
+}
+.user_profile {
+  margin: 10px;
+  color: #F5F5F5;
+  vertical-align: top;
+  font-weight: bold;
+}
 .feed {
   margin: 10px;
 }
@@ -80,14 +90,17 @@ h1 {
   border-radius: 5px;
 }
 .filter {
+  display: inline;
   cursor: pointer;
-  width: 200px;
-  height: auto;
+  width: auto;
   background-color: #B3E5FC;
   border-radius: 5px;
   text-align: center;
   padding: 0 10px 0 10px;
   margin: 10px;
+}
+.new_tweet_label {
+  color: #F5F5F5;
 }
 #new_tweet_form {
   background-color: #03A9F4;

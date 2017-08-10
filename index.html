@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="twittler.css"></link>
     <script src="jquery.js"></script>
     <script src="moment.js"></script>
@@ -23,14 +23,15 @@
         <h4>NEW TWEET</h4>
       </div>
     </div>
+    <div class="user_profile"><h2>@lamdbui (Lam Bui)<h2></div>
     <div id="new_tweet_form">
       <form>
         <p>
-          <label>Username:</label>
+          <label class="new_tweet_label">Username:</label>
           <input type="text" name="username">
         </p>
         <p>
-          <label>Message:</label>
+          <label class="new_tweet_label">Message:</label>
           <input type="textarea" name="message">
         </p>
         <input type="submit" value="Submit">

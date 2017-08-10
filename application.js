@@ -20,6 +20,7 @@ var refreshCurrentTweets = function(user) {
     let $tweetUsername = $('<p class="username"></p>');
     let $tweetDate = $('<p class="date"></p>');
     let $tweetMessage = $('<p class="message"></p>');
+    let $tweetTimestamp = $('<div class="timestamp"></div>');
 
     $tweetUsername.text('@' + tweet.user);
     $tweet.attr('id', tweet.user);
@@ -28,19 +29,22 @@ var refreshCurrentTweets = function(user) {
       currentUser = username;
 
       // show filter box
-      $('.filter').text('Clear filter: ' + username);
+      // use Unicode multiplacation character to represent 'x' to clear filter
+      $('.filter').text('\u2716 ' + username);
       $('.filter').slideDown();
 
       refreshCurrentTweets();
     });
     $tweetDate.text(' - '.concat(timeDifferenceStr));
     $tweetMessage.text(tweet.message);
+    $tweetTimestamp.text(tweet.created_at.toDateString());
     $tweet.prependTo($node);
     $tweetUsername.appendTo($tweet);
     $tweetDate.appendTo($tweet);
+    $tweetTimestamp.appendTo($tweet);
     $tweetMessage.appendTo($tweet);
   }
-  
+
   currentTweetCount = tweets.length;
 
   // hide our 'feed_status', since we updated
